@@ -26,7 +26,7 @@ var videoID;
 function onSearchResponse(response) 
 {
     var responseString = JSON.stringify(response, '', 2);
-    console.log(response);
+    console.log('love' + response);
     videoID = response['items'][0]['id']['videoId'];
     console.log(videoID);
     
