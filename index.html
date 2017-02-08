@@ -11,7 +11,8 @@
   <meta charset="utf-8">
   <title>Mashape Query</title>
   <script>
-	function doIt() {
+	function doIt() 
+      {
         var fname = $("#name1").val();
         var sname = $("#name2").val();
         
@@ -26,7 +27,9 @@
         //To see the whole object you can output it to your browser console using:
         console.log(data);
        	document.getElementById("output").innerHTML = "The Percentage is: " + data['percentage'] + "%"; 
-        document.getElementById("result").innerHTML = "The Result is: " + data['result']; 
+        document.getElementById("result").innerHTML = "The Result is: " + data['result'];
+        document.getElementById("query").value = data['result'];
+        search();
         },
     error: function(err) { alert(err); },
     beforeSend: function(xhr) {
@@ -40,7 +43,8 @@
 <body>
 
 <div class="jumbotron col-sm-6" id="mydiv">
-  <h3> Eternal Companion Probability Calculator </h3>
+  <br>
+  <br>
   <br>
   Enter the first name: <input type="text" id="name1" value=""> 
   <br>
@@ -50,11 +54,10 @@
   <div id="output">The Percentage is:</div>
   <div id="result">The Result is:</div>
     
-        <input id="query" value='cats' type="text"/>
-        <button onclick="search()">Search</button>
+        <input type="hidden" id="query" value='cats' type="text"/>
         <pre id="response"></pre>
-    
+    <div id="player"></div>
 </div>
-  
+    
 </body>
 </html>
