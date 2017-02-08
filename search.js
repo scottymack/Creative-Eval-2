@@ -11,7 +11,8 @@ function onYouTubeApiLoad() {
  
 // Called when the search button is clicked in the html code
 function search() {
-    var query = "love " + document.getElementById('query').value;
+    var query = "love romance valentine" + document.getElementById('query').value;
+    console.log(query);
     // Use the JavaScript client library to create a search.list() API call.
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
